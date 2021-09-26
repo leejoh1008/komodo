@@ -39,6 +39,7 @@ namespace ProgramUI
             //         Console.ReadLine();
             //          break;
             //  }
+            ListofDev();
             Menu();
         }
         private void Menu()
@@ -92,10 +93,10 @@ namespace ProgramUI
                     ReadDev();
                     break;
                 case "3":
-                    AddDev();
+                    UpdateDev();
                     break;
                 case "4":
-                    AddDev();
+                    DeleteDev();
                     break;
                 case " ":
                     Console.Clear();
@@ -104,7 +105,7 @@ namespace ProgramUI
             }
         }
         //beginning of DevActions
-        private void AddDev()               //adding dev     C
+        private void AddDev()               //adding dev     C    
         {
             Developers newDev = new Developers();
             Console.WriteLine("Enter their ID");
@@ -126,9 +127,8 @@ namespace ProgramUI
             }
 
         //                                                          //
-             private void ReadDev()               //reading dev  R
+             private void ReadDev()               //reading dev  R    
              {
-            Console.Clear();
             List<Developers> listOfDevs = _developerClass.GetDeveloperList();
             
             foreach (Developers dev in listOfDevs)
@@ -138,8 +138,67 @@ namespace ProgramUI
                     $"PluralSight:{dev.Pluralsight}");
             }
                 
-            DevActions();
                 }
+        private void UpdateDev()    //updating developer by id and name  U  
+        {
+            Console.Clear();
+            ReadDev();
+            Console.WriteLine("Who would you like to update? Please specify by their id");
+            int input = int.Parse(Console.ReadLine());
+            Developers newDev = new Developers();
+            Console.WriteLine("Enter their ID again");
+            newDev.Id = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter the full name");
+            newDev.Name = Console.ReadLine();
+            Console.WriteLine("Does this person have PluralSight? y/n");
+            string pluralSight = Console.ReadLine().ToLower();
+            if (pluralSight == "y")
+            {
+                newDev.Pluralsight = true;
+            }
+            else
+            {
+                newDev.Pluralsight = false;
+            }
+           bool wasUpdated= _developerClass.UpdateDeveloper(input,newDev);   //if dev was updated or not
+            if (wasUpdated)
+            {
+                Console.WriteLine("The person was successfully updated.");
+            }
+            else
+            {
+                Console.WriteLine("Something went wrong! Please try again");
+            }
+        }
+
+                             private void ListofDev()           //helper method to test list of devlopers            
+                             {
+                                    Developers john = new Developers(12, "John Fenny", true);
+                                    Developers amanda = new Developers(3, "Amanda Bliss", false);
+                                    Developers rob = new Developers(40, "Robby Smith", true);
+
+                                    _developerClass.AddDeveloper(john);
+                                    _developerClass.AddDeveloper(amanda);
+                                    _developerClass.AddDeveloper(rob);
+                                }
+            private void DeleteDev()                    //deletion of developer by id    D
+        {
+            ReadDev();
+            Console.WriteLine("Please enter the ID number corresponding to the person that you would like to delete:");
+            int input = int.Parse(Console.ReadLine());
+            bool wasDelete = _developerClass.RemoveDeveloperFromList(input);
+            if(wasDelete)
+            {
+                Console.WriteLine("The person was successfully deleted.");
+            }
+            else
+            {
+                Console.WriteLine("Something went wrong! Please try again");
+            }
+
+
+        }
+
             private void TeamActions()
         {
             Console.Clear();
