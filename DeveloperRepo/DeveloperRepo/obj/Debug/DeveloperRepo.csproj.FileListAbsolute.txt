@@ -1,0 +1,6 @@
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\DeveloperRepo\bin\Debug\DeveloperRepo.dll
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\DeveloperRepo\bin\Debug\DeveloperRepo.pdb
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\DeveloperRepo\obj\Debug\DeveloperRepo.csproj.AssemblyReference.cache
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\DeveloperRepo\obj\Debug\DeveloperRepo.csproj.CoreCompileInputs.cache
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\DeveloperRepo\obj\Debug\DeveloperRepo.dll
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\DeveloperRepo\obj\Debug\DeveloperRepo.pdb

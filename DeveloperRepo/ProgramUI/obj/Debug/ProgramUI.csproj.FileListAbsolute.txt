@@ -1,0 +1,12 @@
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\ProgramUI\bin\Debug\ProgramUI.exe.config
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\ProgramUI\bin\Debug\ProgramUI.exe
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\ProgramUI\bin\Debug\ProgramUI.pdb
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\ProgramUI\obj\Debug\ProgramUI.csproj.AssemblyReference.cache
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\ProgramUI\obj\Debug\ProgramUI.csproj.CoreCompileInputs.cache
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\ProgramUI\obj\Debug\ProgramUI.exe
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\ProgramUI\obj\Debug\ProgramUI.pdb
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\ProgramUI\bin\Debug\DeveloperRepo.dll
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\ProgramUI\bin\Debug\DevTeamRepo.dll
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\ProgramUI\bin\Debug\DevTeamRepo.pdb
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\ProgramUI\bin\Debug\DeveloperRepo.pdb
+C:\Users\Johns\Documents\ElevenFiftyProjects\Assignments\KomodoInsurance\DeveloperRepo\ProgramUI\obj\Debug\ProgramUI.csproj.CopyComplete
