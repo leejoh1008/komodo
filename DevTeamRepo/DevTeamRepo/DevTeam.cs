@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DevTeamRepo
 {
-    public class DevTeamRepo
+    public class DevTeam
     {
         //Developers person = new Developers();
         public List<Developers> _developers = new List<Developers>();
@@ -16,8 +16,8 @@ namespace DevTeamRepo
 
         public string TeamName { get; set; }
 
-        public DevTeamRepo() { }
-        public DevTeamRepo(int id, List<Developers> dev,string teamName) 
+        public DevTeam() { }
+        public DevTeam(int id, List<Developers> dev,string teamName) 
         {
             Id = id;
             Dev = dev;

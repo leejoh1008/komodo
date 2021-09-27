@@ -9,25 +9,25 @@ namespace DevTeamRepo
 {
     public class DevTeamMethods
     {
-        List<DevTeamRepo> _teams = new List<DevTeamRepo>();
+        List<DevTeam> _teams = new List<DevTeam>();
 
         //create
-        public void AddTeam( DevTeamRepo team)
+        public void AddTeam( DevTeam team)
         {
             _teams.Add(team);
         }
 
         //read
-        public List<DevTeamRepo> GetTeams()
+        public List<DevTeam> GetTeams()
         {
             return _teams;
         }
 
         //update
-        public bool UpdateTeam(int id, DevTeamRepo newTeam)
+        public bool UpdateTeam(int id, DevTeam newTeam)
         {
             //find the developer by id
-            DevTeamRepo oldteam = GetDevTeamById(id);
+            DevTeam oldteam = GetDevTeamById(id);
 
             //update the developer by id
             if (oldteam != null)
@@ -45,18 +45,18 @@ namespace DevTeamRepo
         
         public void AddTeamMember(Developers dev, int teamId)
         {
-            DevTeamRepo theTeam = GetDevTeamById(teamId);
+            DevTeam theTeam = GetDevTeamById(teamId);
             theTeam._developers.Add(dev);
         }
         public void RemoveTeamMember(Developers dev, int teamId)
         {
-            DevTeamRepo theTeam = GetDevTeamById(teamId);
+            DevTeam theTeam = GetDevTeamById(teamId);
             theTeam._developers.Remove(dev);
         }
         //helper method
-        private DevTeamRepo GetDevTeamById(int id)
+        private DevTeam GetDevTeamById(int id)
             {
-                foreach (DevTeamRepo devTeamRepo in _teams)
+                foreach (DevTeam devTeamRepo in _teams)
                 {
                     if (devTeamRepo.Id == id)
                     {

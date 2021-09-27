@@ -14,6 +14,7 @@ namespace ProgramUI
         private DeveloperClass _developerClass = new DeveloperClass();
         private Developers _developers = new Developers();
         private DevTeamMethods _devTeamMethods = new DevTeamMethods();
+        private DevTeam _devTeam = new DevTeam();
 
         public void Run()
         {
@@ -183,8 +184,9 @@ namespace ProgramUI
                                 }
             private void DeleteDev()                    //deletion of developer by id    D
         {
-            ReadDev();
+            
             Console.WriteLine("Please enter the ID number corresponding to the person that you would like to delete:");
+            ReadDev();
             int input = int.Parse(Console.ReadLine());
             bool wasDelete = _developerClass.RemoveDeveloperFromList(input);
             if(wasDelete)
@@ -199,14 +201,82 @@ namespace ProgramUI
 
         }
 
-            private void TeamActions()
+            private void TeamActions()             //TEAM ACTIONS MENU FOR TEAMS OF DEVELOPERS
         {
             Console.Clear();
             Console.WriteLine("What would you like to do?\n" +
-                "1.Add a Developer.\n" +
-                "2.A List of Developers. \n" +
-                "3.Update a Developer.\n" +
-                "4.Delete a Developer.\n");
+                "1.Add a Team of Developer.\n" +
+                "2.Show Teams. \n" +
+                "3.Update a Team.\n" +
+                "4.Delete a Team.\n" +
+                "5.Add Team Member to a team.\n" +
+                "6.Delete Team Member from a team\n" +
+                "SPACEBAR: go back");
+                
+            string response = Console.ReadLine();
+            switch (response)
+            {
+                case "1":
+                    AddTeam();
+                    break;
+                case "2":
+                    ReadTeam();
+                    break;
+                case "3":
+                    UpdateTeam();
+                    break;
+                case "4":
+                    DeleteTeam();
+                    break;
+                case "5":
+                    AddMember();
+                    break;
+                case "6":
+                    DeleteMember();
+                    break;
+                case " ":
+                    Console.Clear();
+                    Menu();
+                    break;
+            }
+        }
+        private void AddTeam()
+        {
+            DevTeam team = new DevTeam();
+            Console.WriteLine("Enter the team's new ID number:");
+            team.Id = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the team's name:");
+            team.TeamName = Console.ReadLine();
+            _devTeamMethods.AddTeam(team);
+        }
+        private void ReadTeam()
+        {
+            List<DevTeam> listOfTeams = _devTeamMethods.GetTeams();
+            foreach (DevTeam team in listOfTeams)
+            {
+                Console.WriteLine($"ID: {team.Id}  Name:{team.TeamName}\n");
+            }
+        }
+        private void UpdateTeam()
+        {
+
+        }
+        private void DeleteTeam()
+        {
+            Console.WriteLine("Please enter the ID number corresponding to the team that you would like to delete:");
+            ReadDev();
+            Developers dev = new Developers();
+            int input = int.Parse(Console.ReadLine());
+            _devTeamMethods.RemoveTeamMember(dev,input);
+            
+        }
+        private void AddMember()
+        {
+
+        }
+        private void DeleteMember()
+        {
+
         }
         //beginning of TeamActions
 
